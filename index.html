@@ -6,6 +6,7 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		
+		<link rel ="stylesheet" type="text/css" href ="survey-style-sheet.css">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
@@ -13,3 +14,141 @@
 	<body>
 	
 		<main>
+			
+			  <h1 id="title">Course Evaluation</h1>
+				  <form id="survey-form">
+            
+               <p id="description">Your feedback helps improve courses</p>
+
+               <div class="single-response">
+                <label for="name" id="name-label"> Instructor's Name:</label>
+                <input type="text" required name="instructor" id="name" placeholder="enter instructor's name" class="nonfieldset">
+               </div>
+
+               <div class="single-response">
+                <label for ="email" id="email-label">Instructor's Email:</label>
+                <input type="email"  required name ="email" id="email" placeholder ="enter instructor's email" class="nonfieldset">
+               </div>
+
+                <fieldset>
+
+                  <legend class="checkbox-legend">Why did you take the course?</legend>
+                   <p class="fieldset-instructions">(Select all that apply)</p>
+
+                  <div class ="multiple-response">
+                    <input type="checkbox" name="student-purpose" id="requirement" value="requirement">
+                    <label for ="requirement">Fulfills requirement</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="checkbox" name="student-purpose" id="interests" value="interests">
+                    <label for ="interests">Aligns with my interests</label>
+                  </div>
+
+                  <div class="multiple-response" >
+                    <input type="checkbox" name="student-purpose" id="schedule" value="schedule">
+                      <label for ="schedule">Fit my schedule</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="checkbox" name="student-purpose" id="instructor-repute" value="instructor-repute">
+                     <label for ="instructor-repute">Instructor's reputation</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="checkbox" name="student-purpose" id="course-repute" value="course-repute"> 
+                     <label for ="course-repute">I heard the course was easy</label>
+                  </div>
+
+                </fieldset>
+
+                <div class="single-response">
+                    <label for ="number" id="number-label">On average, how many hours per week did you spend preparing for the course?</label>
+                    <input type="number" name="study-hours" id="number" placeholder="Enter number of hours (digits)" min=0 max=168 class="nonfieldset">
+                </div>
+              
+                <div class="single-response"> Select one response to each of the following statements:
+              </div>
+
+                <fieldset name="course-organized">
+
+                  <legend>The course was well organized.</legend>
+                  <div class="multiple-response">
+                    <input type="radio" name="course-organized" id="course-strongly-disagree" value="strongly-disagree">
+                    <label for ="course-strongly-disagree">Strongly Disagree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="course-organized" id="course-disagree" value="disagree">
+                    <label for ="course-disagree">Disagree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="course-organized" id="course-neutral" value="neutral">
+                    <label for ="course-neutral">Neutral</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="course-organized" id="course-agree" value="agree">
+                    <label for ="course-agree">Agree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="course-organized" id="course-strongly-agree" value="strongly-agree">
+                    <label for ="course-strongly-agree">Strongly Agree</label>
+                  </div>
+                </fieldset>
+                
+
+                <fieldset>
+
+                  <legend>The instructor was well prepared.</legend>
+                
+                  <div class="multiple-response">
+                    <input type="radio" name="instructor-prepared" id="instructor-strongly-disagree" value="strongly-disagree">
+                    <label for ="instructor-strongly-disagree">Strongly Disagree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="instructor-prepared" id="instructor-disagree" value="disagree">
+                    <label for ="instructor-disagree">Disagree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="instructor-prepared" id="instructor-neutral" value="neutral">
+                    <label for ="instructor-neutral">Neutral</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="instructor-prepared" id="instructor-agree" value="agree">
+                    <label for ="instructor-agree">Agree</label>
+                  </div>
+
+                  <div class="multiple-response">
+                    <input type="radio" name="instructor-prepared" id="instructor-strongly-agree" value="strongly-agree">
+                    <label for ="instructor-strongly-agree">Strongly Agree</label>
+                  </div>
+                </fieldset>
+
+                <div class="single-response">	
+                  <label for="dropdown">Would you recommend this course to a peer?</label>
+                    <select name="recommend" id="dropdown" class="nonfieldset">
+                      <option value="disabled selected">Select an option</option>
+                      <option>Yes</option>
+                      <option>Maybe</option>
+                      <option>No</option>
+                    </select>
+                </div>
+
+                 <div class="single-response">
+                  <label for="comments">What did you appreciate about the course? What could be improved?</label>
+            </div>
+                 <textarea id="comments">
+                 </textarea>
+             
+                  <button id="submit">Submit</button>
+            </form>
+           
+
+                <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
